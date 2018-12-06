@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+.video-xx{
+  width: 100%;
+}
+.video-xxv{
+  width: 100%;
+}
+.video-title{
+  padding-left: 20px;
+}

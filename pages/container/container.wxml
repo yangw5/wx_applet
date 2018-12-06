@@ -1,0 +1,18 @@
+<!--pages/container/container.wxml-->
+<view class="top-title">
+<view class=" flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+  </view>
+      <view class="ctnt1 placehold" hidden="{{currentNavtab==0? '' : true}}">
+    <text>推荐</text>
+  </view>
+    <view class="ctnt1 placehold" hidden="{{currentNavtab==1 ? '' : true}}">
+    <text>趣事</text>
+  </view>
+  <view class="ctnt2 placehold" hidden="{{currentNavtab==2 ? '' : true}}">
+    <text>热门</text>
+  </view>
+  <view class="ctnt3 placehold" hidden="{{currentNavtab==3 ? '' : true}}">
+    <text>收藏</text>
+  </view>

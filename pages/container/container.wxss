@@ -1,0 +1,18 @@
+/* pages/container/container.wxss */
+.top-title{
+width: 750px;
+height: 100px;
+background: #298DE5;
+color: #8CCEFD;
+font-size: 28rpx;
+line-height: 100px;
+box-shadow: 0 2px 2px #bebebe;
+margin-bottom: 8rm;
+z-index: 100;
+}
+.flex-item{
+  width: 80px;
+  margin-left: 10px;
+  display: inline-block;
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+<!--pages/face/face.wxml-->
+  <view class="search flex-wrp">
+      <view class=" flex-item">
+      <image src='../../image/search.png'></image>
+          <input placeholder="搜索喵咪名" placeholder-class="search-placeholder"/>
+      </view>
+  </view>
+  <block wx:for="{{data}}"  wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" >
+  <view class='containner'  bindtap="bindItemTap">
+  <image src='{{itemName.feed_source_img}}'></image>
+  <view>{{itemName.name}}</view>
+  </view>
+  </block>

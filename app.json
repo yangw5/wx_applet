@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/face/face",
+    "pages/home/home",
+    "pages/container/container",
+    "pages/ownset/ownset",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/faceitem/faceitem"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0068C4",
+    "navigationBarTitleText": "猫咪屋",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/face/face",
+        "text": "",
+        "iconPath": "image/chat.png",
+        "selectedIconPath": "image/chat_focus.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "",
+        "iconPath": "image/chat.png",
+        "selectedIconPath": "image/chat_focus.png"
+      },
+      {
+        "pagePath": "pages/container/container",
+        "text": "",
+        "iconPath": "image/chat.png",
+        "selectedIconPath": "image/chat_focus.png"
+      },
+      {
+        "pagePath": "pages/ownset/ownset",
+        "text": "",
+        "iconPath": "image/chat.png",
+        "selectedIconPath": "image/chat_focus.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "image/chat.png",
+        "selectedIconPath": "image/chat_focus.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
