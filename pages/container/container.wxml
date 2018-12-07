@@ -8,7 +8,23 @@
     <text>推荐</text>
   </view>
     <view class="ctnt1 placehold" hidden="{{currentNavtab==1 ? '' : true}}">
-    <text>趣事</text>
+    <view>
+    <view class='mftitle'>
+    <image src='../../image/m1.jpg'></image>
+    <text style='color: #979090;'>猫咪主人</text>
+    <view>
+     <text>我家的小喵咪很贪玩</text>
+    </view>
+    </view>
+      <view class='mftext'>
+      <image src='../../image/m1.jpg'></image>
+    </view>
+     <view class='mfbottom'>
+      <text>赞:500</text>
+      <text>评论:19</text>
+      <text>时间:2018-5-5</text>
+    </view>
+    </view>
   </view>
   <view class="ctnt2 placehold" hidden="{{currentNavtab==2 ? '' : true}}">
     <text>热门</text>

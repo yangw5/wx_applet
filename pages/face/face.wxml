@@ -1,8 +1,8 @@
 <!--pages/face/face.wxml-->
   <view class="search flex-wrp">
       <view class=" flex-item">
-      <image src='../../image/search.png'></image>
-          <input placeholder="搜索喵咪名" placeholder-class="search-placeholder"/>
+      <image src='../../image/search.png' bindtap="upper" data-id='1'></image>
+          <input placeholder="搜索喵咪名" placeholder-class="search-placeholder" bindinput ="userNameInput"/>
       </view>
   </view>
   <block wx:for="{{data}}"  wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" >

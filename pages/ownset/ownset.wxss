@@ -1,1 +1,32 @@
 /* pages/ownset/ownset.wxss */
+.owntop{
+  width: 100%;
+  height: 130px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.ownimage{
+width: 120px;
+height: 120px;
+display: inline-block;
+}
+.ownimage image{
+  width: 80px;
+  height: 80px;
+  padding: 20px 20px  0px 20px ;
+}
+.ownifo{
+  width:200px;
+  height: 120px;
+  display: inline-block;
+ 
+}
+.ownset{
+margin-top: 20px;
+ color: #837b7b;
+}
+.ownseach{
+  height: 50px;
+  line-height: 50px;
+  padding-left:100px;
+  border-bottom: 1px solid #f0f0f0;
+}

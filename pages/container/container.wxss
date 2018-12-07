@@ -16,3 +16,30 @@ z-index: 100;
   display: inline-block;
   text-align: center;
 }
+.mftitle{
+  height: 60px;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.mftitle image{
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+.mftext{
+  margin-top: 10px;
+  height: 120px;
+  padding: 0 20px 20px 20px;
+}
+.mftext image{
+  height: 100%;
+}
+.mfbottom{
+  height: 30px;
+  color: #979090;
+}
+.mfbottom text{
+  margin-left: 20px;
+}

@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    searchtext:'',
     data: [
       {
         "name": "暹罗猫",
@@ -161,9 +162,27 @@ Page({
   onShareAppMessage: function () {
 
   },
+  // 查看猫咪详情
   bindItemTap: function () {
     wx.navigateTo({
       url: '../faceitem/faceitem'
     })
   },
+//获取输入框的值
+  userNameInput: function (e) {
+    this.setData({
+      searchtext: e.detail.value
+    })
+  },
+
+  upper:function(e){
+    var id = e.currentTarget.dataset.id
+    console.log(id);
+  
+      wx.showToast({
+        title: this.data.searchtext,
+        icon: 'fail',
+        duration: 2000
+      })
+  }
 })
