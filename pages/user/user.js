@@ -1,27 +1,18 @@
-// pages/container/container.js
-
-//引入数据模块
-var outdata = require('../../data/data_containner.js')
-
+// pages/home/home.js
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {//数据访问要通过 this.data.xxx进行访问
-    navTab: ["推荐", "趣事", "热门", "收藏"],
-    data1:[],
-    currentNavtab:0
+  data: {
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var a = outdata.containner.Recommend;
-    this.setData({
-      data1:a
-    });
+
   },
 
   /**
@@ -57,18 +48,6 @@ Page({
    */
   onPullDownRefresh: function () {
 
-  },
-  switchTab: function (e) {
-    this.setData({
-      currentNavtab: e.currentTarget.dataset.idx
-    });
-  },
-  // 查看用户详情
-  bindItemTap: function () {
-    //页面跳转
-    wx.navigateTo({
-      url: '../user/user'
-    })
   },
 
   /**

@@ -6,7 +6,8 @@ Page({
    */
   data: {
     searchtext:'',
-    data: [
+    searchdata:[],
+    data2: [
       {
         "name": "暹罗猫",
         "id": 1,
@@ -110,8 +111,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
 
+  onLoad: function (options) {
+    //数据拷贝
+    this.setData({
+      searchdata: this.data.data2
+    })
   },
 
   /**
@@ -164,6 +169,7 @@ Page({
   },
   // 查看猫咪详情
   bindItemTap: function () {
+    //页面跳转
     wx.navigateTo({
       url: '../faceitem/faceitem'
     })
@@ -174,15 +180,21 @@ Page({
       searchtext: e.detail.value
     })
   },
-
+//搜索功能 
   upper:function(e){
     var id = e.currentTarget.dataset.id
-    console.log(id);
-  
-      wx.showToast({
-        title: this.data.searchtext,
-        icon: 'fail',
-        duration: 2000
+    var result=[];
+    var self = this;
+    for (var i = 0; i <self.data.data2.length;i++){
+      var flag = self.data.data2[i].name.indexOf(self.data.searchtext);
+      if (flag != -1){
+        result.push(self.data.data2[i]);
+      }
+      //赋值必须通过setData进行
+      this.setData({
+        searchdata: result
       })
+    }
+    console.log(result);
   }
 })

@@ -6,7 +6,9 @@
     "pages/ownset/ownset",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/faceitem/faceitem"
+    "pages/faceitem/faceitem",
+    "pages/user/user"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,12 +20,6 @@
     "list": [
       {
         "pagePath": "pages/face/face",
-        "text": "",
-        "iconPath": "image/chat.png",
-        "selectedIconPath": "image/chat_focus.png"
-      },
-      {
-        "pagePath": "pages/home/home",
         "text": "",
         "iconPath": "image/chat.png",
         "selectedIconPath": "image/chat_focus.png"

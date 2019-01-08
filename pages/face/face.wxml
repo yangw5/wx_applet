@@ -5,7 +5,8 @@
           <input placeholder="搜索喵咪名" placeholder-class="search-placeholder" bindinput ="userNameInput"/>
       </view>
   </view>
-  <block wx:for="{{data}}"  wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" >
+
+  <block wx:for="{{searchdata}}"  wx:for-index="index" wx:for-item="itemName" data-idx="{{idx}}" wx:key="index"  >
   <view class='containner'  bindtap="bindItemTap">
   <image src='{{itemName.feed_source_img}}'></image>
   <view>{{itemName.name}}</view>
