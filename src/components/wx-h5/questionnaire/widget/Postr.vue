@@ -5,7 +5,7 @@
  * @Email: yangw5@163.com
  * @Date: 2020-03-08 09:41:32
  * @LastEditors: yangw5
- * @LastEditTime: 2020-03-10 09:22:44
+ * @LastEditTime: 2020-03-10 14:50:11
  * @FilePath: \vue-h5-ts\src\components\wx-h5\questionnaire\widget\Postr.vue
  -->
 
@@ -24,11 +24,11 @@
         :dotScale="0.5"
       ></vue-qr>-->
 
-      <div class="p_buttons">
+      <div class="p_buttons" v-if="flog">
         <XButton @click.native="screenShot" type="warn">生成海报</XButton>
         <XButton type="warn">转发分享</XButton>
       </div>
-      <div :class="pstatus?'p_show':'p_hide'">
+      <div :class="pstatus ? 'p_show' : 'p_hide'">
         <XImg :src="imgsrc" />
       </div>
 
@@ -55,34 +55,41 @@ export default class Login extends Vue {
   title: string = "海报生成";
   imgsrc: any = "../../../../assets/bj.jpg";
   pstatus: boolean = false;
+  flog: boolean = true;
   mounted() {}
   screenShot(): any {
-    html2canvas(this.$refs.imageToFile as HTMLCanvasElement, {
-      width:
-        window.innerWidth ||
-        document.documentElement.clientWidth ||
-        document.body.clientWidth,
-      height:
-        window.innerHeight ||
-        document.documentElement.clientHeight ||
-        document.body.clientHeight
-    }).then(canvas => {
-      // 第一个参数是需要生成截图的元素,第二个是自己需要配置的参数,宽高等
-      var url = canvas.toDataURL(); //图片路径
-      // this.imgsrc = canvas.toDataURL("image/png");
-      this.imgsrc = canvas.toDataURL();
-      console.log("yang");
-      console.log(url);
-      this.pstatus = true;
-      // console.log(this.imgsrc);
-    });
+    this.flog = false;
+    setTimeout(() => {
+      html2canvas(this.$refs.imageToFile as HTMLCanvasElement, {
+        width:
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth,
+        height:
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight
+      }).then(canvas => {
+        // 第一个参数是需要生成截图的元素,第二个是自己需要配置的参数,宽高等
+        var url = canvas.toDataURL(); //图片路径
+        // this.imgsrc = canvas.toDataURL("image/png");
+        this.imgsrc = canvas.toDataURL();
+        console.log("yang");
+        console.log(url);
+        this.pstatus = true;
+        // console.log(this.imgsrc);
+      });
+    }, 0);
   }
   close(): void {
     this.pstatus = false;
+    this.flog = true;
+    // location.reload();
+    // this.$router.go(0);
   }
 }
 </script>
-<style lang="less" >
+<style lang="less">
 @import "~vux/src/styles/close.less";
 .postr_root {
   width: 100%;

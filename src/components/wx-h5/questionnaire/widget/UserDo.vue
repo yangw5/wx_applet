@@ -5,16 +5,21 @@
  * @Email: yangw5@163.com
  * @Date: 2020-03-06 11:07:00
  * @LastEditors: yangw5
- * @LastEditTime: 2020-03-10 08:59:25
+ * @LastEditTime: 2020-03-10 14:15:47
  * @FilePath: \vue-h5-ts\src\components\wx-h5\questionnaire\widget\UserDo.vue
  -->
 <template>
   <div class="userdo_root">
+    <x-header
+      :left-options="{ backText: '', preventGoBack: true }"
+      @on-click-back="govideo"
+      >问卷调查</x-header
+    >
     <div>
       <div class="userdo_form">
         <div>
           <checklist
-            :title="`${nowdata+1 }:${datas[nowdata].title}`"
+            :title="`${nowdata + 1}:${datas[nowdata].title}`"
             required
             :max="1"
             :options="datas[nowdata].selectItems"
@@ -24,21 +29,33 @@
           <!-- <li v-for="item in datas[nowdata].selectItems" :key="item.id">{{item.value}}</li> -->
         </div>
         <div class="userdo_buttons">
-          <XButton v-if="nowdata!==0" type="warn" @click.native="lastTest">上一题</XButton>
-          <XButton v-if="nowdata!==datas.length-1" type="warn" @click.native="nextTest">下一题</XButton>
-          <XButton v-if="nowdata===datas.length-1" type="warn" @click.native="sumit">提交</XButton>
+          <XButton v-if="nowdata !== 0" type="warn" @click.native="lastTest"
+            >上一题</XButton
+          >
+          <XButton
+            v-if="nowdata !== datas.length - 1"
+            type="warn"
+            @click.native="nextTest"
+            >下一题</XButton
+          >
+          <XButton
+            v-if="nowdata === datas.length - 1"
+            type="warn"
+            @click.native="sumit"
+            >提交</XButton
+          >
         </div>
       </div>
     </div>
-    {{showFormItem()}}
+    {{ showFormItem() }}
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Emit } from "vue-property-decorator";
-import { XButton, Checklist } from "vux";
+import { XButton, Checklist, XHeader } from "vux";
 @Component({
-  components: { XButton, Checklist }
+  components: { XButton, Checklist, XHeader }
 })
 export default class Login extends Vue {
   title: string = "用户问卷调查操作";
@@ -170,13 +187,16 @@ export default class Login extends Vue {
   }
   sumit(): void {
     console.log(this.checkData);
-    this.ok();
+    this.ok(true);
+  }
+  govideo() {
+    this.ok(false);
   }
   @Emit("ok")
-  ok() {}
+  ok(flog: boolean) {}
 }
 </script>
-<style lang="less" >
+<style lang="less">
 .userdo_root {
   z-index: 100;
   width: 100%;

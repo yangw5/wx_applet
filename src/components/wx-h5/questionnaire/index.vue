@@ -5,14 +5,14 @@
  * @Email: yangw5@163.com
  * @Date: 2020-03-06 11:07:00
  * @LastEditors: yangw5
- * @LastEditTime: 2020-03-09 21:40:07
+ * @LastEditTime: 2020-03-10 14:41:08
  * @FilePath: \vue-h5-ts\src\components\wx-h5\questionnaire\index.vue
  -->
 <template>
   <div class="wx_root">
-    <!-- <VideoCustom />
-    <Audiocoustom />-->
-    <UserDo @ok="oschange" v-if="!os" />
+    <VideoCustom v-if="showVideo" @hide="videochang" />
+    <!-- <Audiocoustom /> -->
+    <UserDo @ok="oschange" v-if="!os && !showVideo" />
     <Postr v-if="os" />
   </div>
 </template>
@@ -23,24 +23,33 @@ import VideoCustom from "../../widget/VideoCustom.vue";
 import Audiocoustom from "../../widget/Audiocoustom.vue";
 import UserDo from "./widget/UserDo.vue";
 import Postr from "./widget/Postr.vue";
+import Result from "./widget/Result.vue";
 @Component({
   components: {
     VideoCustom,
     Audiocoustom,
     UserDo,
-    Postr
+    Postr,
+    Result
   }
 })
 export default class Login extends Vue {
   title: string = "问卷调查";
   os: boolean = false;
+  showVideo: boolean = true;
   mounted() {}
-  oschange(): void {
-    this.os = !this.os;
+  oschange(flog: boolean): void {
+    if (!flog) {
+      this.showVideo = true;
+    }
+    this.os = flog;
+  }
+  videochang(): void {
+    this.showVideo = false;
   }
 }
 </script>
-<style lang="less" >
+<style lang="less">
 .wx_root {
   height: 100%;
   display: flex;

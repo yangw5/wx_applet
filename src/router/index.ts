@@ -5,7 +5,7 @@
  * @Email: yangw5@163.com
  * @Date: 2020-03-06 10:28:57
  * @LastEditors: yangw5
- * @LastEditTime: 2020-03-07 10:40:05
+ * @LastEditTime: 2020-03-10 14:51:06
  * @FilePath: \vue-h5-ts\src\router\index.ts
  */
 import Vue from "vue";
@@ -19,8 +19,10 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    // name: "Home",
+    // component: Home
+    name: "Questionnaire",
+    component: Questionnaire
   },
   {
     path: "/about",
