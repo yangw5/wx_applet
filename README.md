@@ -1,29 +1,26 @@
+<!--
+ * @File:
+ * @Description:
+ * @Autor: yangw5
+ * @Email: yangw5@163.com
+ * @Date: 2020-03-06 10:30:05
+ * @LastEditors: yangw5
+ * @LastEditTime: 2020-03-10 10:31:30
+ * @FilePath: \vue-h5-ts\README.md
+ -->
+
 # vue-h5-ts
 
-## Project setup
-```
-yarn install
-```
+该项目是 H5 项目，是通过 vue+ts+vux 进行开发
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 项目启动
 
-### Compiles and minifies for production
-```
-yarn build
-```
+    yarn
 
-### Run your unit tests
-```
-yarn test:unit
-```
+    yarn serve
 
-### Lints and fixes files
-```
-yarn lint
-```
+    yarn build //打包
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    yarn test:unit//测试
+
+    yarn lint //校验
