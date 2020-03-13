@@ -1,0 +1,77 @@
+/* pages/good/index.wxss */
+@import "/template/share/index.wxss";
+@import "/wxParse/wxParse.wxss";
+
+.swiper_box {
+  width: 100%;
+  height: 748rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height: 748rpx;
+}
+
+.good-info {
+  background-color: #fff;
+  padding: 35rpx 0;
+  margin-bottom: 24rpx;
+  width: 100%;
+  position: relative;
+}
+
+.good-info .good-title {
+  box-sizing: border-box;
+  padding: 0 35rpx;
+  font-size: 32rpx;
+  line-height: 1.4;
+  color: #000;
+  margin-bottom: 28rpx;
+}
+
+.good-info .good-share {
+  box-sizing: border-box;
+  padding: 0 35rpx;
+  font-size: 25rpx;
+  line-height: 1.4;
+  color: #c00;
+  margin-bottom: 28rpx;
+}
+
+.good-profile {
+  display: flex;
+  align-items: center;
+}
+
+.good-profile .good_prices {
+  color: #e64340;
+  font-size: 20pt;
+  margin-left: 30rpx;
+}
+
+.good-profile .good-price {
+  color: #aaa;
+  text-decoration: line-through;
+  padding: 15rpx 0rpx 0rpx 15rpx;
+}
+
+.good-profile .good_prices text {
+  font-size: 12pt;
+}
+
+.good-profile .r {
+  color: #ccc;
+  font-size: 10pt;
+  margin-left: 30rpx;
+}
+
+.good-info-fx {
+  margin-left: 60rpx;
+}
+.label-title{
+  font-size:28rpx;
+  color:#000000;
+  padding: 30rpx;
+}

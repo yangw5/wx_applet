@@ -1,0 +1,15 @@
+<!--pages/container/index.wxml-->
+<view>
+  <van-tabs sticky active="{{ active }}" bind:change="onChange" animated swipeable>
+    <van-tab title="分类">
+      <modal-goodtype></modal-goodtype>
+      </van-tab>
+      <van-tab title="发现">
+        <modal-search bind:sumit="searchapi" text='老子来了'></modal-search>
+      </van-tab>
+      <van-tab title="趣玩">趣玩</van-tab>
+      <van-tab title="直播">直播</van-tab>
+      <van-tab title="vlog">vlog</van-tab>
+      <van-tab title="游戏">游戏</van-tab>
+  </van-tabs>
+</view>

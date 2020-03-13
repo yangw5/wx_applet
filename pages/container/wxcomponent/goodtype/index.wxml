@@ -1,0 +1,19 @@
+<!--pages/container/wxcomponent/goodtype/index.wxml-->
+<view class="root">
+  <scroll-view scroll-y="true" class="scrollleft" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!-- 通过点击实现多页分页效果 -->
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red" class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+  <scroll-view scroll-y="true" class="scrollright">
+    <!-- <view class="nogoods" >商品</view> -->
+    <view class="nogoods">
+      <view class="line"></view>
+      <view class="txt">暂无商品</view>
+      <view class="line"></view>
+    </view>
+
+  </scroll-view>
+</view>

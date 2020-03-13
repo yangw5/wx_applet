@@ -1,0 +1,9 @@
+<!--pages/good/goods.wxml-->
+<view>
+<view>图片</view>
+<view>name</view>
+<view>piece</view>
+</view>
+<view>
+商品介绍
+</view>

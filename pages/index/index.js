@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+// const WXAPI = require('../../miniprogram_npm/apifm-wxapi/index')
 Page({
   data: {
     motto: 'Hello World',
@@ -16,6 +16,11 @@ Page({
     })
   },
   onLoad: function () {
+    // WXAPI.banners({
+    //   type: 'app'
+    // }).then(function (res) {
+    //  console.log(res)
+    // });
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

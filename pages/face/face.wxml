@@ -1,14 +1,75 @@
 <!--pages/face/face.wxml-->
-  <view class="search flex-wrp">
-      <view class=" flex-item">
-      <image src='../../image/search.png' bindtap="upper" data-id='1'></image>
-          <input placeholder="搜索喵咪名" placeholder-class="search-placeholder" bindinput ="userNameInput"/>
+<view class="face_heard">
+  <swiper indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <image mode="aspectFill" bindtap="tapBanner" data-url="{{item.linkUrl}}" src="{{item.picUrl}}" />
+    </swiper-item>
+  </swiper>
+  <view class="search">
+    <input type="text" placeholder="請輸入關鍵詞" value="{{searchValue}}" bindinput="bindinput" bindconfirm="bindconfirm"></input>
+    <image src="/image/icon/search.svg"></image>
+    <!-- <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" bind:search="onSearch" bind:change="onChange" shape="round" /> -->
+  </view>
+</view>
+<view class="notice">
+  <view>
+    <image src="/image/icon/notice.svg"></image>
+    <text>新店開業，滿100立減少30，戳我查看詳情</text>
+  </view>
+  <view class="more">
+    <text>更多</text>
+    <van-icon name="arrow" />
+  </view>
+</view>
+<view class="goodstype">
+  <view class="category-list" wx:for="{{categories}}" wx:key="id">
+    <view class="category-column {{activeCategoryId == item.id ? 'type-item-on' : ''}}" bindtap="tabClick" id="{{item.id}}">
+      <image mode="aspectFill" class="category-imgbox" src="{{item.icon}}"></image>
+      <view class="category-title">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+<van-divider contentPosition="center">推荐</van-divider>
+<view class="goodtop">
+  <view wx:for="{{goodsRecommend}}" class="goodtop_item">
+    <view class="top_img">
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class="top_info">
+      <view class="top_name">{{item.name}}</view>
+      <view class="top_price">
+        <text>
+      $ {{item.minPrice}}</text>
+        <text class="oldprice">
+       {{item.originalPrice}}</text>
       </view>
+    </view>
   </view>
-
-  <block wx:for="{{searchdata}}"  wx:for-index="index" wx:for-item="itemName" data-idx="{{idx}}" wx:key="index"  >
-  <view class='containner'  bindtap="bindItemTap">
-  <image src='{{itemName.feed_source_img}}'></image>
-  <view>{{itemName.name}}</view>
+</view>
+<van-divider contentPosition="center">商品列表</van-divider>
+<view class="goodtop">
+  <view wx:for="{{goodsList}}" class="goodtop_item" bindtap="togoodpage" data-id="{{item.id}}">
+    <view class="top_img">
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class="top_info">
+      <view class="top_name">{{item.name}}</view>
+      <view class="top_price">
+        <text>
+      $ {{item.minPrice}}</text>
+        <text class="oldprice">
+       {{item.originalPrice}}</text>
+      </view>
+    </view>
   </view>
-  </block>
+</view>
+<view class="loading" wx:if="{{loading}}">
+  <van-loading type="spinner" />
+  <view>正在加载更多</view>
+</view>
+<view class='complete' wx:if="{{!loading}}">
+  <view>已加载全部</view>
+</view>
+<view class="goTop" bindtap="goTop" wx:if="{{goTopstatus}}">
+  top
+</view>

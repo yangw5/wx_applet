@@ -1,0 +1,9 @@
+<!--pages/start/start.wxml-->
+<swiper class="swiper_box" bindchange="swiperchange" indicator-dots="true" indicator-active-color="#fff">
+ <swiper-item  wx:for="{{imglist}}" wx:key="id">
+  <image  bindtap="imgClick" src="{{item.picUrl}}"  />
+ </swiper-item>
+</swiper>
+<view class="btn">
+  <van-button type="primary" wx:if="{{swiperCurrent + 1 == swiperMaxNumber}}"  bindtap="goToIndex" >进入店铺</van-button>
+</view>

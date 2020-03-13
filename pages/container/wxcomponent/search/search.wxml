@@ -1,0 +1,7 @@
+<!--pages/container/wxcomponent/search/search.wxml-->
+<view class="root">
+  <view class="search">
+    <input type="text" placeholder="請輸入關鍵詞" value="{{serchvalue}}"  bindinput="bindinput" bindconfirm="bindconfirm"></input>
+    <image src="/image/icon/search.svg"></image>
+  </view>
+</view>

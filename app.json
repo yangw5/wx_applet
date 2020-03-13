@@ -3,42 +3,48 @@
     "pages/face/face",
     "pages/home/home",
     "pages/container/container",
-    "pages/ownset/ownset",
+    "pages/cars/cars",
     "pages/index/index",
     "pages/logs/logs",
     "pages/faceitem/faceitem",
-    "pages/user/user"
-
+    "pages/user/user",
+    "pages/start",
+    "pages/start/start",
+    "pages/goods/goods",
+    "pages/container/index",
+    "pages/container/wxcomponent/goodtype/goodtype",
+    "pages/good/goods",
+    "pages/good/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#0068C4",
-    "navigationBarTitleText": "猫咪屋~瞄",
+    "navigationBarTitleText": "小五微店",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/face/face",
-        "text": "",
+        "text": "首页",
         "iconPath": "image/chat.png",
         "selectedIconPath": "image/chat_focus.png"
       },
       {
-        "pagePath": "pages/container/container",
-        "text": "",
+        "pagePath": "pages/container/index",
+        "text": "周边",
         "iconPath": "image/chat.png",
         "selectedIconPath": "image/chat_focus.png"
       },
       {
-        "pagePath": "pages/ownset/ownset",
-        "text": "",
+        "pagePath": "pages/cars/cars",
+        "text": "购物车",
         "iconPath": "image/chat.png",
         "selectedIconPath": "image/chat_focus.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "",
+        "text": "我的",
         "iconPath": "image/chat.png",
         "selectedIconPath": "image/chat_focus.png"
       }
@@ -48,5 +54,6 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

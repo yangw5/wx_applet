@@ -1,0 +1,46 @@
+<!--pages/good/index.wxml-->
+<import src="/template/share/index.wxml" />
+<import src="/wxParse/wxParse.wxml" />
+<view class="good_swiper">
+  <swiper class="swiper_box" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:if="{{goodinfo.basicInfo.videoId}}">
+      <video src="{{videoMp4Src}}" autoplay="true" loop="true" style='width:100%;height:100%;'></video>
+    </swiper-item>
+    <swiper-item wx:for="{{goodinfo.pics}}" wx:key="id">
+      <image src="{{item.pic}}" class="slide-image" lazy-load="true"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="good_info">
+  <view class="good-title">{{goodinfo.basicInfo.name}}</view>
+  <view class="good-profile">
+    <view class="good_prices">
+      <text>¥</text> {{goodinfo.basicInfo.minPrice}}</view>
+    <view wx:if="{{goodinfo.basicInfo.originalPrice && goodinfo.basicInfo.originalPrice > 0}}" class="good-price">
+      <text>¥</text> {{goodinfo.basicInfo.originalPrice}}</view>
+    <view class="r">{{goodinfo.basicInfo.numberSells}}人已买</view>
+    <view class="good-info-fx">
+      <template is="share" />
+    </view>
+  </view>
+
+</view>
+
+<view class="good-des-info">
+  <view class="label-title">商品介绍</view>
+  <view class="good-text">
+    <template is="wxParse" data="{{wxParseData:goodcontent.nodes}}" />
+    <!-- <wxparse data="{{ goodinfo.content }}"></wxparse> -->
+  </view>
+</view>
+
+<block wx:if="{{posterShow}}">
+  <view class="poster-mask"></view>
+  <view class="poster">
+    <canvas class="canvas" style="{{canvasstyle}}" canvas-id="firstCanvas"></canvas>
+  </view>
+  <view class="poster-btn">
+    <button type="primary" size="mini" bindtap='_saveToMobile'> 保存图片 </button>
+    <button type="warn" size="mini" bindtap='closePop'> 关闭 </button>
+  </view>
+</block>

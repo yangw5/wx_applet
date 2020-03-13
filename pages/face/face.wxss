@@ -1,36 +1,162 @@
 /* pages/face/face.wxss */
+ .face_heard{
+  /* height: 100px; */
+  position: relative
+ }
  .search{
-  width: 735rpx;
-  height: 65rpx;
-  padding: 12.5rpx 0 12.5rpx 15rpx;
-  background: #2A8CE5;
+  position: absolute;
+  top: 32rpx;
+  left: 25rpx;
+  width: 700rpx;
+  height: 66rpx;
+  display: block;
+  box-sizing: border-box;
+ }
+ .search input {
+  display: block;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1rpx solid #e3e3e3;
+  width: 700rpx;
+  height: 66rpx;
+  border-radius: 30rpx;
+  padding-left: 50rpx; 
+  padding-right: 50rpx; 
 }
-.flex-item input{
-  padding-left: 20px;
-  display: inline-block;
-  color:  #8CCEFD;
+.search image {
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 16rpx;
+  right: 32rpx;
 }
-.search-placeholder{
-  color: #8CCEFD;
-  line-height: 20rpx;
+.notice{
+  width: 100%;
+  height: 66rpx;
+  display: flex;
+  justify-content: space-between;
+  color: red;
+  font-size: 12px;
+  line-height: 66rpx
 }
-.flex-item image{
-  height: 65rpx;
-  width: 65rpx;
-  display: inline-block;
+.notice view{
+   height: 66rpx;
+   line-height: 66rpx;
+   display: flex;
+
 }
-.containner{
-  margin:5px;
-  width:150px;
-  height: 150px;
-  display: inline-block;
+.notice view text{
+   height: 66rpx;
+   line-height: 66rpx
+}
+.notice image{
+  width:50rpx;
+  height: 50rpx;
+  color: red;
+  padding: 8rpx;
+  animation: blink 1s  infinite;
+}
+@keyframes blink{
+   50% {
+    background: red;
+  }
+}
+
+.more{
+  color: black;
+  float: right;
+  margin-right: 10rpx
+}
+.goodstype{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.category-list{
+  width:150rpx;
+  margin-top:20rpx;
   text-align: center;
-  padding: 10px;
-  font-size: 14px;
-}
-.containner image{
-  width: 120px;
-  height: 120px;
-  border-radius: 50px;
   display: inline-block;
+  overflow: hidden;
+}
+.category-column{
+  width:100%;
+  margin-top:20rpx;
+  overflow: hidden;
+}
+.category-imgbox{
+  width:80rpx;
+  height:80rpx;
+}
+.category-title{
+  font-size: 24rpx;
+  text-align:center;
+  margin-top:10rpx;
+}
+.goodtop{
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  background: #eee;
+  padding: 20rpx 0 ;
+}
+.goodtop_item{
+  width: 43%;
+  padding: 20rpx;
+  background: #fff;
+  border: 2px solid #eee;
+}
+.top_img{
+  width: 100%
+}
+.top_img image{
+  width: 100%
+}
+.top_info{}
+.top_name{
+  width: 100%;
+  height: 66rpx;
+  overflow: hidden;
+    /*文本不会换行*/
+  white-space: nowrap;
+    /*当文本溢出包含元素时，以省略号表示超出的文本*/
+  text-overflow: ellipsis;
+  font-size:14px;
+}
+.top_price{
+   font-size:15px;
+   color: red;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between
+}
+.oldprice{
+  color:#aaa;
+  text-decoration:line-through
+}
+.goTop{
+  position: fixed;
+  color: red;
+  background: #fff;
+  bottom: 30rpx;
+  right: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 60rpx
+}
+.complete{
+  height: 60rpx;
+  line-height: 60rex;
+  text-align: center;
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 14px;
 }

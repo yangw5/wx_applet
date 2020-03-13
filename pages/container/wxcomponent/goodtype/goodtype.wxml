@@ -1,0 +1,10 @@
+<!--pages/container/wxcomponent/goodtype/goodtype.wxml-->
+<view class="root">
+  <scroll-view scroll-y="true" class="scrollleft" >
+  <!-- bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" -->
+    <view>分类</view>
+  </scroll-view>
+  <scroll-view scroll-y="true"  class="scrollright" >
+    <view>商品</view>
+  </scroll-view>
+</view>

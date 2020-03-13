@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab",
+    "van-tabs": "@vant/weapp/tabs",
+    "modal-search":"./wxcomponent/search/search",
+    "modal-goodtype":"./wxcomponent/goodtype/index"
+  },
+  "navigationBarTitleText": "周边"
+}

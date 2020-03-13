@@ -1,0 +1,11 @@
+<!--pages/cars/cars.wxml-->
+<view class="cars">
+  <view class="cars_null">
+    <image src="/image/chat_focus.png"></image>
+    <text>购物车空空如也~</text>
+    <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)">逛一逛</van-button>
+  </view>
+</view>
+<view>
+你可能喜欢的...
+</view>

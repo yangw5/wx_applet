@@ -1,21 +1,85 @@
 /**index.wxss**/
-.userinfo {
+
+.user_root {
+}
+
+.user_heard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heard_login {
+  height: 250rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heard_login image {
+  height: 160rpx;
+  width: 160rpx;
+}
+
+/* .heard_login button{
+  font-size: 12px;
+  padding: 0;
+  height: 60rpx
+} */
+
+.account {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background: #eee;
+  padding-top: 4rpx;
+}
+
+.account view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  width: 33%;
+}
+
+.order {
+  background: #eee;
+  padding-top: 20rpx;
+}
+
+.order-shortcut {
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+
+.order-shortcut .item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 150rpx;
+  text-align: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.order-shortcut .item .icon {
+  width: 67rpx;
+  height: 67rpx;
+  margin-left: 45rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.order-shortcut .item .text {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #666;
 }
 
-.usermotto {
-  margin-top: 20px;
+.van-divider {
+  width: 100%;
+  height: 1px;
+  background: #eee;
 }

@@ -1,1 +1,11 @@
-{}
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search",
+    "van-icon": "@vant/weapp/icon",
+    "van-divider": "@vant/weapp/divider",
+    "van-loading": "@vant/weapp/loading"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 50
+}

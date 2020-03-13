@@ -1,0 +1,12 @@
+<template name="share">
+  <view class="apifmShare">
+    <view class='share'>
+      <image src='/image/share/share1.png'></image>
+      <button open-type='share'></button>
+    </view>
+    <view class='share'>
+      <image src='/image/share/share2.png'></image>
+      <button bindtap="_createPoster" data-d="{{goodinfo}}"> </button>
+    </view>
+  </view>
+</template>
